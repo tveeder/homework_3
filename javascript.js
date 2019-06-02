@@ -3,6 +3,7 @@
 var wins = 0;
 var loss = 0;
 var guessesLeft = 9;
+var flag = 0;
 
 var my_guess = []
 var random_character = []
@@ -10,10 +11,21 @@ var chosen_random_letter = []
 
 var x = randCharacter();
 
-// alert("hello there.  your javascript is linked");   
+alert("hello there.  your javascript is linked");
+
+
+
+function startGame() {
+
+    document.getElementById("Wins").innerHTML = "Wins: " + wins;
+    document.getElementById("Losses").innerHTML = "Loss: " + loss;
+    document.getElementById("GuessesLeft").innerHTML = "Guesses Left: " + guessesLeft;
+
+}
 
 document.onkeydown = function (event) {
 
+    startGame();
     var key_pressed = String.fromCharCode(event.keyCode);
 
     document.getElementById("The Key").innerHTML = "you pressed " + key_pressed;
@@ -65,7 +77,7 @@ function updateLoss() {
     document.getElementById("Losses").innerHTML = "Losses: " + loss;
     document.getElementById("GuessesLeft").innerHTML = "Guesses Left: " + guessesLeft;
     guessesLeft--;
-    if (guessesLeft === -1) {
+    if (guessesLeft ===  - 2) {
         alert("your game is over.  pls try again.");
         resetGame();
     }
@@ -83,6 +95,7 @@ function resetGame() {
     loss = 0;
     guessesLeft = 10;
     my_guess = [];
+    flag = 1;
     document.getElementById("Wins").innerHTML = "Wins: " + wins;
     document.getElementById("Losses").innerHTML = "Loss: " + loss;
     document.getElementById("GuessesLeft").innerHTML = "Guesses Left: " + guessesLeft;
