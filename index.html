@@ -1,32 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="javascript.js">  </script>
-
+    <title>Psychic game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
 
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 top">
+                <h2>Are you a Carnac the Magnificent?</h2>
+                <h4>Guess a letter. You have 9 chances to get it right. Good luck. </h4>
+            </div>
+        </div>
+        <br>
+        <div class="row lead box">
+            <div class="col-md-4">
+                <img src="assets/images/carson.jpg" class="img-responsive" alt="psychic-ball" />
+            </div>
+            <div class="col-md-8">
+                <p class="text-black" id="win">Wins: </p>
+                <br>
+                <p class="text-black" id="loss">Loss: </p>
+                <br>
+                <p id="guessleft">Number of guess left: </p>
+                <br>
+                <p id="guessofar">Your guess so far:</p>
+            </div>
+        </div>
+    </div>
 
-    <h1>The Psychic Game</h1>
+
+    <!-- Link to javascript game.js -->
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
 
 
-    <p> Hit any key to guess the letter I am thinking of... </p>
-    <p>***you have 10 guesses only.***</p>
 
-    <p id="The Key"></p>
-    <p id="Wins"> Wins: </p>
-    <p id="Losses">Losses: </p>
-    <p id="GuessesLeft">Guesses Left:</p>
-    <p id="your guesses">Your guesses so far:</p>
-
-    <MARQUEE DIRECTION=LEFT>Game Active </MARQUEE>
 </body>
 
 </html>
