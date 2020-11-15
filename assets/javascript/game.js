@@ -24,7 +24,7 @@
 	    guessSoFar = [];
 	    guessLeft = 9;
 	    computerGuess = computerChoice[Math.floor(Math.random() * computerChoice.length)];
-	    //	    console.log(computerGuess);
+	    console.log(computerGuess);
 	}
 
 
@@ -38,7 +38,7 @@
 	    if (!/[a-z]/.test(userGuess)) {
 	        alert("please choose letter only");
 	        guessLeft++;
-	        loss--;
+	        //    loss--;
 	    }
 
 	    //if a letter is not typed yet, then log it in the guessSoFar array
@@ -48,7 +48,7 @@
 	    } else {
 	        alert("You already guessed this letter, please choose another one");
 	        guessLeft++;
-	        loss--;
+	        //   loss--;
 
 
 	    }
@@ -66,15 +66,14 @@
 
 	    //if userGuess is not the same with computerGuess, then record loss (#)
 	    else {
-	        loss++;
-
+	        //loss++;
 	        //if userGuess is not the same with computerGuess then guessLeft decrease 
 	        guessLeft--;
 	    }
 
 	    //if guestLeft is 0 then the game reset to the default and start a new game
 	    if (guessLeft === 0) {
-
+	        loss++
 	        alert("You lost")
 	        reset();
 	    }
