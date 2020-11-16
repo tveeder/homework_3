@@ -79,8 +79,8 @@
 	    }
 
 	    //write out in HTML body
-	    document.querySelector('#win').innerHTML = "Win: " + win;
-	    document.querySelector('#loss').innerHTML = "Loss: " + loss;
+	    document.querySelector('#win').innerHTML = "Total Wins: " + win;
+	    document.querySelector('#loss').innerHTML = "Total Losses: " + loss;
 	    document.querySelector('#guessleft').innerHTML = "Number of guess left: " + guessLeft;
 	    document.querySelector('#guessofar').innerHTML = " Your guess so far: " + guessSoFar;
 
