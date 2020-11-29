@@ -74,7 +74,7 @@
 	    //if guestLeft is 0 then the game reset to the default and start a new game
 	    if (guessLeft === 0) {
 	        loss++
-	        alert("You lost")
+	        alert("You lost.  Let's try again.")
 	        reset();
 	    }
 
